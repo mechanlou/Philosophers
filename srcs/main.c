@@ -12,6 +12,8 @@
 
 #include "philo.h"
 
+struct timeval  g_eur;
+
 int	perror_ret(char *error)
 {
 	write(2, error, ft_strlen(error));
@@ -24,7 +26,8 @@ int	main(int argc, char **argv)
 	int			ret;
 	t_table		table;
 	pthread_t	*philo_tab;
-
+	
+	ret = 0;
 	if (check_args(&table, argc, argv) < 0)
 		return (1);
 	if (init_table(&table) < 0)
@@ -39,5 +42,5 @@ int	main(int argc, char **argv)
 		ret = monitor_philos(&table);
 	free_struct(&table);
 	free(philo_tab);
-	return (0);
+	return (ret);
 }

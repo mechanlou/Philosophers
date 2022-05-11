@@ -20,7 +20,7 @@
 # include <stdbool.h>
 # include <sys/time.h>
 
-struct timeval	g_eur;
+extern struct timeval  g_eur;
 
 typedef struct s_table
 {

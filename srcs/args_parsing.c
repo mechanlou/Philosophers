@@ -31,9 +31,6 @@ int	pars_arg(char *arg)
 
 int	check_args(t_table *table, int argc, char **argv)
 {
-	int	i;
-
-	i = 1;
 	if (argc < 5 || argc > 6)
 	{
 		write(2, "Wrong arg number\n", ft_strlen("Wrong arg number\n"));
